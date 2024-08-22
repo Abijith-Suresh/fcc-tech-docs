@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Python Documentation</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Python Documentation</header>
+      <ul>
+        <li>
+          <a class="nav-link" href="#Introduction">Introduction</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Python_Basics">Python Basics</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Control_Flow">Control Flow</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Data_Structures">Data Structures</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Functions">Functions</a>
+        </li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <h2>History and Features</h2>
+          <p>
+            Python was created in the late 1980s by Guido van Rossum at the
+            Centrum Wiskunde & Informatica (CWI) in the Netherlands and was
+            released as Python 0.9.0 in February 1991. It is named after the
+            British comedy series "Monty Python's Flying Circus," which Guido
+            enjoyed. Python emphasizes code readability, simplicity, and
+            elegance, which have contributed to its widespread adoption and
+            community support. Key features of Python include:
+          </p>
+          <ul>
+            <li>
+              <strong>Easy to Learn and Use:</strong> Python's simple and
+              straightforward syntax makes it accessible to beginners.
+            </li>
+            <li>
+              <strong>Interpreted Language:</strong> Python code is executed
+              line by line, which simplifies debugging and allows for
+              interactive coding.
+            </li>
+            <li>
+              <strong>High-level Language:</strong> Python abstracts away most
+              of the complex details of the computer, allowing developers to
+              focus on programming logic.
+            </li>
+            <li>
+              <strong>Extensive Standard Library:</strong> Python comes with a
+              rich set of libraries and modules that facilitate tasks like file
+              handling, web development, and data manipulation.
+            </li>
+            <li>
+              <strong>Cross-Platform:</strong> Python runs on various operating
+              systems, including Windows, macOS, and Linux.
+            </li>
+            <li>
+              <strong>Community Support:</strong> A large and active community
+              provides extensive documentation, tutorials, and third-party
+              modules.
+            </li>
+          </ul>
+          <h2>Installation and Setup</h2>
+          <p>
+            Getting started with Python is straightforward. Here’s how to
+            install and set it up:
+          </p>
+          <ol>
+            <li>
+              <h3>Download Python:</h3>
+              <ul>
+                <li>Visit the official Python website: python.org</li>
+                <li>
+                  Download the latest version suitable for your operating system
+                  (Windows, macOS, Linux).
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3>Install Python:</h3>
+              <ul>
+                <li>
+                  Windows: Run the downloaded installer, ensure "Add Python to
+                  PATH" is checked, and follow the on-screen instructions.
+                </li>
+                <li>
+                  macOS: Use the installer package and follow the prompts.
+                  Alternatively, use Homebrew: brew install python.
+                </li>
+                <li>
+                  Linux: Use the package manager of your distribution. For
+                  example, on Ubuntu: sudo apt-get install python3.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3>Verify Installation:</h3>
+              <ul>
+                <li>Open a terminal or command prompt.</li>
+                <li>
+                  Type python --version or python3 --version to check the
+                  installed version.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3>Set Up a Text Editor or IDE:</h3>
+              <ul>
+                <li>
+                  Choose a text editor or Integrated Development Environment
+                  (IDE) to write Python code. Popular options include Visual
+                  Studio Code, PyCharm, Sublime Text, and Atom.
+                </li>
+                <li>
+                  Install Python extensions or plugins if necessary to enhance
+                  the coding experience.
+                </li>
+              </ul>
+            </li>
+          </ol>
+          <h2>Running Python Scripts</h2>
+          <p>
+            Running Python scripts can be done in several ways, depending on the
+            development environment:
+          </p>
+          <ol>
+            <li>
+              <h3>Interactive Mode:</h3>
+              <ul>
+                <li>Open a terminal or command prompt.</li>
+                <li>Type python or python3 to enter the interactive mode.</li>
+                <li>Write and execute Python commands directly.</li>
+              </ul>
+            </li>
+            <li>
+              <h3>Script Mode:</h3>
+              <ul>
+                <li>
+                  Write your Python code in a text file with a .py extension.
+                  For example, hello.py.
+                </li>
+                <li>Open a terminal or command prompt.</li>
+                <li>
+                  Navigate to the directory containing your script using the cd
+                  command.
+                </li>
+                <li>
+                  Run the script by typing python hello.py or python3 hello.py.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3>Using an IDE:</h3>
+              <ul>
+                <li>Open your Python script in the IDE.</li>
+                <li>
+                  Use the IDE's run feature, typically available as a button or
+                  a menu option, to execute the script.
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </article>
+      </section>
+      <section class="main-section" id="Python_Basics">
+        <header>Python Basics</header>
+        <article>
+          <h2>Syntax and Indentation</h2>
+          <p>
+            Python syntax is clean and easy to understand. The language uses
+            indentation to define code blocks instead of curly braces or
+            keywords. Proper indentation is crucial as it indicates a block of
+            code, such as functions, loops, and conditional statements.
+          </p>
+          <div class="example-code">
+            <p>Example:</p>
+            <pre><code class="python">
+              if True:
+                print("This is true")
+              else:
+                print("This is false")
+            </code></pre>
+          </div>
+          <h2>Variables and Data Types</h2>
+          <p>
+            Variables in Python are created by assigning a value to a name using
+            the = operator. Python is dynamically typed, meaning you don't need
+            to declare the type of a variable explicitly. Common data types
+            include:
+          </p>
+          <ul>
+            <li>Integers: Whole numbers (e.g., 10)</li>
+            <li>Floats: Decimal numbers (e.g., 10.5)</li>
+            <li>Strings: Text (e.g., "Hello")</li>
+            <li>Booleans: True or False values (e.g., True)</li>
+          </ul>
+          <div class="example-code">
+            <p>Example:</p>
+            <pre><code class="python">
+              age = 25
+              name = "Alice"
+              is_student = True
+              height = 5.6
+            </code></pre>
+          </div>
+          <h2>Comments</h2>
+          <p>
+            Comments are used to explain code and are ignored by the Python
+            interpreter. Single-line comments start with the # symbol, while
+            multi-line comments can be enclosed in triple quotes (''' or """).
+          </p>
+          <div class="example-code">
+            <p>Example:</p>
+            <pre><code class="python">
+              # This is a single-line comment
+
+              """
+              This is a
+              multi-line comment
+              """
+              </code></pre>
+          </div>
+          <h2>Input and Output</h2>
+          <p>
+            Python provides built-in functions for taking input from the user
+            and displaying output.
+          </p>
+          <ul>
+            <li>
+              <strong>Input:</strong> Use <code>input()</code> to get user input
+              as a string.
+            </li>
+            <li>
+              <strong>Output:</strong> Use <code>print()</code> to display
+              output.
+            </li>
+          </ul>
+          <div class="example-code">
+            <p>Example:</p>
+            <pre><code class="python">
+              name = input("Enter your name: ")
+              print("Hello, " + name)
+            </code></pre>
+          </div>
+          <h2>Basic Operators</h2>
+          <p>
+            Python supports various operators for performing calculations and
+            comparisons.
+          </p>
+          <ul>
+            <li>
+              <strong>Arithmetic Operators:</strong> +, -, *, /, %, **
+              (exponentiation), // (floor division)
+            </li>
+            <li><strong>Comparison Operators:</strong> ==, !=, >, <, >=, <=</li>
+            <li><strong>Logical Operators:</strong> and, or, not</li>
+            <li><strong>Assignment Operators:</strong> =, +=, -=, *=, /=</li>
+          </ul>
+          <div class="example-code">
+            <p>Example:</p>
+            <pre><code class="python">
+              x = 10
+              y = 5
+              sum = x + y        # Addition
+              difference = x - y # Subtraction
+              product = x * y    # Multiplication
+              quotient = x / y   # Division
+              remainder = x % y  # Modulus
+              power = x ** y     # Exponentiation
+              <br>
+              is_equal = (x == y) # Comparison
+              is_greater = (x > y) # Comparison
+            </code></pre>
+          </div>
+        </article>
+      </section>
+      <section class="main-section" id="Control_Flow">
+        <header>Control Flow</header>
+        <article>
+          <h2>Conditional Statements (if, elif, else)</h2>
+          <p>
+            Conditional statements allow you to execute certain pieces of code
+            based on whether a condition is true or false.
+          </p>
+          <ul>
+            <li>
+              <code>if:</code> Executes a block of code if the condition is
+              true.
+            </li>
+            <li>
+              <code>elif:</code> Stands for "else if," and checks another
+              condition if the previous conditions are false.
+            </li>
+            <li>
+              <code>else:</code> Executes a block of code if none of the
+              preceding conditions are true.
+            </li>
+          </ul>
+          <div class="example-code">
+            <p>Example:</p>
+            <pre><code class="python">
+              x = 10
+              if x > 0:
+                print("x is positive")
+              elif x == 0:
+                print("x is zero")
+              else:<br>
+                &ensp;print("x is negative")
+            </code></pre>
+          </div>
+          <h2>Loops (for, while)</h2>
+          <p>
+            Loops are used to execute a block of code repeatedly as long as a
+            condition is met.
+          </p>
+          <ul>
+            <li>
+              for loop: Iterates over a sequence (e.g., list, tuple, string) or
+              range.
+            </li>
+            <li>
+              while loop: Repeats as long as a specified condition is true.
+            </li>
+          </ul>
+          <div class="example-code">
+            <p>Example:</p>
+            <pre><code class="python">
+              // For Loop
+              for i in range(5):
+                print(i)
+              
+              // While Loop
+              count = 0
+              while count < 5:
+                print(count)
+                count += 1
+                print("x is positive")
+            </code></pre>
+          </div>
+          <h2>Loop Control Statements (break, continue, pass)</h2>
+          <p>Loop control statements modify the behavior of loops.</p>
+          <ul>
+            <li>break: Exits the loop prematurely.</li>
+            <li>
+              continue: Skips the rest of the code inside the loop for the
+              current iteration and moves to the next iteration.
+            </li>
+            <li>pass: Does nothing and can be used as a placeholder.</li>
+          </ul>
+          <div class="example-code">
+            <p>Example:</p>
+            <pre><code class="python">
+              // BREAK
+              for i in range(5):
+                if i == 3:
+                  &ensp;&ensp;break
+                &ensp;print(i)
+              
+              // CONTINUE
+              for i in range(5):
+                if i == 3:
+                  continue
+                print(i)
+              
+              // PASS
+              for i in range(5):
+                if i == 3:
+                  pass  # Placeholder for future code
+                print(i)
+            </code></pre>
+          </div>
+        </article>
+      </section>
+      <section class="main-section" id="Data_Structures">
+        <header>Data Structures</header>
+        <h2>Lists</h2>
+        <p>
+          Lists are ordered, mutable collections that can hold items of
+          different data types. They are defined using square brackets [].
+        </p>
+        <div class="example-code">
+          <p>Example:</p>
+          <pre><code class="python">
+            fruits = ["apple", "banana", "cherry"]
+            print(fruits)  # Output: ['apple', 'banana', 'cherry']
+            
+            # Accessing elements
+            print(fruits[0])  # Output: 'apple'
+            
+            # Adding elements
+            fruits.append("orange")
+            print(fruits)  # Output: ['apple', 'banana', 'cherry', 'orange']
+            
+            # Removing elements
+            fruits.remove("banana")
+            print(fruits)  # Output: ['apple', 'cherry', 'orange']
+          </code></pre>
+        </div>
+        <h2>Tuples</h2>
+        <p>
+          Tuples are ordered, immutable collections. They are similar to lists
+          but cannot be changed after creation. Tuples are defined using
+          parentheses ().
+        </p>
+        <div class="example-code">
+          <p>Example:</p>
+          <pre><code class="python">
+            coordinates = (10, 20)
+            print(coordinates)  # Output: (10, 20)
+            
+            # Accessing elements
+            print(coordinates[0])  # Output: 10
+            
+            # Tuples are immutable
+            # coordinates[0] = 15  # This will raise a TypeError
+          </code></pre>
+        </div>
+        <h2>Sets</h2>
+        <p>
+          Sets are unordered collections of unique elements. They are defined
+          using curly braces {} or the set() function.
+        </p>
+        <div class="example-code">
+          <p>Example:</p>
+          <pre><code class="python">
+            colors = {"red", "green", "blue"}
+            print(colors)  # Output: {'red', 'green', 'blue'}
+            
+            # Adding elements
+            colors.add("yellow")
+            print(colors)  # Output: {'red', 'green', 'blue', 'yellow'}
+            
+            # Removing elements
+            colors.remove("green")
+            print(colors)  # Output: {'red', 'blue', 'yellow'}
+          </code></pre>
+        </div>
+        <h2>Dictionaries</h2>
+        <p>
+          Dictionaries are unordered collections of key-value pairs. They are
+          defined using curly braces {} with a colon separating keys and values.
+        </p>
+        <div class="example-code">
+          <p>Example:</p>
+          <pre><code class="python">
+            student = {
+              &ensp;"name": "Alice",
+              &ensp;"age": 25,
+              &ensp;"major": "Computer Science"
+            }
+            print(student)  # Output: {'name': 'Alice', 'age': 25, 'major': 'Computer Science'}
+            
+            # Accessing values
+            print(student["name"])  # Output: 'Alice'
+            
+            # Adding a new key-value pair
+            student["grade"] = "A"
+            print(student)  # Output: {'name': 'Alice', 'age': 25, 'major': 'Computer Science', 'grade': 'A'}
+            
+            # Removing a key-value pair
+            del student["age"]
+            print(student)  # Output: {'name': 'Alice', 'major': 'Computer Science', 'grade': 'A'}
+          </code></pre>
+        </div>
+      </section>
+      <section class="main-section" id="Functions">
+        <header>Functions</header>
+        <h2>Defining and Calling Functions</h2>
+        <p>
+          Functions are blocks of reusable code that perform a specific task.
+          They are defined using the def keyword followed by the function name
+          and parentheses ().
+        </p>
+        <div class="example-code">
+          <p>Example:</p>
+          <pre><code class="python">
+            def greet(name):
+              &ensp;print("Hello, " + name + "!")
+            
+            # Calling the function
+            greet("Alice")  # Output: Hello, Alice!
+          </code></pre>
+        </div>
+        <h2>Function Arguments (default, keyword, arbitrary)</h2>
+        <p>Functions can take various types of arguments:</p>
+        <ul>
+          <li>
+            Default Arguments: Provide a default value if no argument is passed.
+          </li>
+          <li>
+            Keyword Arguments: Arguments passed with their name (e.g.,
+            key=value).
+          </li>
+          <li>
+            Arbitrary Arguments: Allow passing a variable number of arguments
+            using *args (for positional arguments) or **kwargs (for keyword
+            arguments).
+          </li>
+        </ul>
+        <div class="example-code">
+          <p>Example:</p>
+          <pre><code class="python">
+            # Default Argument
+              def greet(name="Guest"):
+                &ensp;print("Hello, " + name + "!")
+              greet()  # Output: Hello, Guest!
+            
+            # Keyword Arguments
+            def greet(name, greeting="Hello"):
+              &ensp;print(greeting + ", " + name + "!")
+            greet(name="Alice", greeting="Hi")  # Output: Hi, Alice!
+            
+            # Arbitrary Arguments
+            def greet(*names):
+              &ensp;for name in names:
+                &ensp;&ensp;print("Hello, " + name + "!")
+            greet("Alice", "Bob", "Charlie")  # Output: Hello, Alice! Hello, Bob! Hello, Charlie!
+            
+            # Arbitrary Keyword Arguments
+            def greet(**names):
+              &ensp;for key, value in names.items():
+                &ensp;&ensp;print("Hello, " + value + "!")
+            greet(name1="Alice", name2="Bob")  # Output: Hello, Alice! Hello, Bob!
+          </code></pre>
+        </div>
+        <h2>Return Statement</h2>
+        <p>
+          The return statement is used to exit a function and optionally pass
+          back a value.
+        </p>
+        <div class="example-code">
+          <p>Example:</p>
+          <pre><code class="python">
+            def add(a, b):
+              return a + b
+            
+            result = add(3, 5)
+            print(result)  # Output: 8
+          </code></pre>
+        </div>
+        <h2>Lambda Functions</h2>
+        <p>
+          Lambda functions are small anonymous functions defined using the
+          lambda keyword. They can have any number of arguments but only one
+          expression.
+        </p>
+        <div class="example-code">
+          <p>Example:</p>
+          <pre><code class="python">
+            # Regular function
+            def add(a, b):
+              &ensp;return a + b
+            
+            # Lambda function
+            add = lambda a, b: a + b
+            <br>
+            print(add(3, 5))  # Output: 8
+          </code></pre>
+        </div>
+        <h2>Scope and Lifetime of Variables</h2>
+        <p>
+          The scope of a variable determines where it can be accessed, and its
+          lifetime refers to how long it exists in memory.
+        </p>
+        <ul>
+          <li>
+            Local Scope: Variables declared inside a function are local to that
+            function.
+          </li>
+          <li>
+            Global Scope: Variables declared outside any function are global and
+            can be accessed anywhere in the code.
+          </li>
+        </ul>
+        <div class="example-code">
+          <p>Example:</p>
+          <pre><code class="python">
+            global_var = "I am global"
+            
+            def my_function():
+              &ensp;local_var = "I am local"
+              &ensp;print(global_var)  # Can access global variable
+              &ensp;print(local_var)   # Can access local variable
+            
+            my_function()
+            
+            # print(local_var)  # This would raise an error as local_var is not accessible outside the function
+          </code></pre>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
